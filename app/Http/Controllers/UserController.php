@@ -11,9 +11,9 @@ class UserController extends Controller
     public function getUsers()
     {
    
-        $user = User::all();
+        $users = User::all();
 
-        return view('Users', ['users'=> $user]);
+        return view('Users', ['users'=> $users]);
     }
 
 
