@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 Route::get('/',  [UserController::class, 'index']);
 Route::get('/CreateUser', [UserController::class, 'createUser']);
-Route::get('/{user}/EditUser',[UserController::class, 'editUsers']);
+Route::get('/{user}/edit',[UserController::class, 'editUsers']);
 Route::put('/{user}', [UserController::class, 'submit']);
 Route::delete('/{user}', [UserController::class, 'deleteUser']);
 Route::post('/', [UserController::class, 'store']);

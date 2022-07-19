@@ -38,7 +38,7 @@ class UserController extends Controller
 
      //function for edting user
     public function editUsers(User $user){
-        return view('EditUser', ['user'=> $user]);
+        return view('edit', ['user'=> $user]);
      } 
 
 // function for submitting updated data
