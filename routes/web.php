@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('', function () {
     return view('welcome');
 });
-Route::get('/CreateUser',[UserController::class, 'getUsers']);
+Route::get('/',[UserController::class, 'getUsers']);
 Route::get('/CreateUser', [UserController::class, 'createUser']);
 Route::get('/{user}/EditUser',[UserController::class, 'editUsers']);
 Route::put('/{user}', [UserController::class, 'submit']);
