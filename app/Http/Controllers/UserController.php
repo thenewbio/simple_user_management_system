@@ -13,7 +13,7 @@ class UserController extends Controller
    
         $users = User::all();
 
-        return view('/Users', ['users'=> $users]);
+        return view('/Users', ['users' => $users]);
     }
 
 
