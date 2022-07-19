@@ -61,9 +61,9 @@ class UserController extends Controller
  
          return redirect('/');
      } 
-     public function deleteUser(User $id)
+     public function deleteUser($id)
      {
-               $id->delete();
+         User::destroy($id);
          return redirect('/');  
      }
 }
