@@ -8,6 +8,8 @@
 </head>
 <body>
 <div class="container">
+<form method="POST" action="/">
+            @csrf
         <div class="row">
             <div class="col-md-9">
                 <div class="card">
@@ -43,11 +45,9 @@
                                         <td>
                                         
                                             <a href="{{ url($user->id . '/edit') }}" title="Edit Student"><button class="ml-4 bg-blue-500 tracking-wide text-white px-6 py-2 inline-block mb-6 shadow-lg rounded hover:shadow"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
-                                            <form method="POST" action="{{ url('/' . $user->id) }}" style="display:inline">
-                                            {{ method_field('DELETE') }}
-                                                {{ csrf_field() }}
+                                          
                                                 <button class="ml-4 bg-red-500 tracking-wide text-white px-6 py-2 inline-block mb-6 shadow-lg rounded hover:shadow" title="Delete Student" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
-                                            </form>
+                                          
                                         </td>
                                     </tr>
                                 @endforeach
@@ -57,7 +57,9 @@
                     </div>
                 </div>
             </div>
+            
         </div>
+        </form>
     </div>
 </body>
 </html>
