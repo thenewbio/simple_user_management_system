@@ -8,11 +8,11 @@ class UserController extends Controller
 {
     //
 
-    public function index(){
+    public function getUsers(){
    
         $users = User::all();
 
-        return view('index', ['users' => $users]);
+        return view('users', ['users' => $users]);
     }
 
 
