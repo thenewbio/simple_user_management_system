@@ -8,12 +8,11 @@ class UserController extends Controller
 {
     //
 
-    public function getUsers()
-    {
+    public function users(){
    
         $users = User::all();
 
-        return view('Users', ['users' => $users]);
+        return view('users.users', ['users' => $users]);
     }
 
 
