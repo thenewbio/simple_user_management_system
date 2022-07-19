@@ -63,7 +63,7 @@ class UserController extends Controller
      } 
      public function deleteUser($id)
      {
-         User::destroy($id);
+         $user =  User::where('id',$id)->destroy();
          return redirect('/');  
      }
 }
